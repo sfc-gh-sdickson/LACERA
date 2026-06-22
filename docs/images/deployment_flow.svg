@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1000" height="600" fill="#ffffff"/>
+  <text x="500" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">LACERA Agent - Deployment Flow</text>
+
+  <!-- Step 1 -->
+  <rect x="50" y="70" width="200" height="80" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="150" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#1976d2">Step 1</text>
+  <text x="150" y="115" text-anchor="middle" font-size="10" fill="#1a1a2e">Database Setup</text>
+  <text x="150" y="133" text-anchor="middle" font-size="8" fill="#666666">01_database_and_schema.sql</text>
+  <line x1="250" y1="110" x2="290" y2="110" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 2 -->
+  <rect x="290" y="70" width="200" height="80" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="390" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#1976d2">Step 2</text>
+  <text x="390" y="115" text-anchor="middle" font-size="10" fill="#1a1a2e">Create Tables</text>
+  <text x="390" y="133" text-anchor="middle" font-size="8" fill="#666666">02_create_tables.sql</text>
+  <line x1="490" y1="110" x2="530" y2="110" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 3 -->
+  <rect x="530" y="70" width="200" height="80" rx="8" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="630" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#1976d2">Step 3</text>
+  <text x="630" y="115" text-anchor="middle" font-size="10" fill="#1a1a2e">Generate Data</text>
+  <text x="630" y="133" text-anchor="middle" font-size="8" fill="#666666">03_generate_synthetic_data.sql</text>
+  <line x1="730" y1="110" x2="770" y2="110" stroke="#1976d2" stroke-width="1.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 4 -->
+  <rect x="770" y="70" width="200" height="80" rx="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+  <text x="870" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#4caf50">Step 4</text>
+  <text x="870" y="115" text-anchor="middle" font-size="10" fill="#1a1a2e">Analytical Views</text>
+  <text x="870" y="133" text-anchor="middle" font-size="8" fill="#666666">04_create_views.sql</text>
+
+  <!-- Arrow down from step 4 -->
+  <line x1="870" y1="150" x2="870" y2="190" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 5 -->
+  <rect x="770" y="190" width="200" height="80" rx="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+  <text x="870" y="215" text-anchor="middle" font-size="11" font-weight="bold" fill="#4caf50">Step 5</text>
+  <text x="870" y="235" text-anchor="middle" font-size="10" fill="#1a1a2e">Semantic Views (x3)</text>
+  <text x="870" y="253" text-anchor="middle" font-size="8" fill="#666666">05_create_semantic_views.sql</text>
+  <line x1="770" y1="230" x2="730" y2="230" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 6 -->
+  <rect x="530" y="190" width="200" height="80" rx="8" fill="#fff3e0" stroke="#ff9800" stroke-width="1.5"/>
+  <text x="630" y="215" text-anchor="middle" font-size="11" font-weight="bold" fill="#ff9800">Step 6</text>
+  <text x="630" y="235" text-anchor="middle" font-size="10" fill="#1a1a2e">Cortex Search (x3)</text>
+  <text x="630" y="253" text-anchor="middle" font-size="8" fill="#666666">06_create_cortex_search.sql</text>
+  <line x1="530" y1="230" x2="490" y2="230" stroke="#ff9800" stroke-width="1.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 7 -->
+  <rect x="290" y="190" width="200" height="80" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="390" y="215" text-anchor="middle" font-size="11" font-weight="bold" fill="#9c27b0">Step 7</text>
+  <text x="390" y="235" text-anchor="middle" font-size="10" fill="#1a1a2e">ML Models (Optional)</text>
+  <text x="390" y="253" text-anchor="middle" font-size="8" fill="#666666">07_ml_models.ipynb</text>
+  <line x1="290" y1="230" x2="250" y2="230" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#arrow1)"/>
+
+  <!-- Step 8 -->
+  <rect x="50" y="190" width="200" height="80" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="150" y="215" text-anchor="middle" font-size="11" font-weight="bold" fill="#9c27b0">Step 8</text>
+  <text x="150" y="235" text-anchor="middle" font-size="10" fill="#1a1a2e">ML Functions (x3)</text>
+  <text x="150" y="253" text-anchor="middle" font-size="8" fill="#666666">08_ml_model_functions.sql</text>
+
+  <!-- Arrow down to agent -->
+  <line x1="500" y1="280" x2="500" y2="320" stroke="#e91e63" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- Step 9 - Agent -->
+  <rect x="300" y="320" width="400" height="90" rx="10" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
+  <text x="500" y="350" text-anchor="middle" font-size="14" font-weight="bold" fill="#e91e63">Step 9 - Create Agent</text>
+  <text x="500" y="375" text-anchor="middle" font-size="11" fill="#1a1a2e">09_create_agent.sql</text>
+  <text x="500" y="395" text-anchor="middle" font-size="9" fill="#666666">Combines: 3 Semantic Views + 3 Search Services + 3 ML Functions</text>
+
+  <!-- Result -->
+  <line x1="500" y1="410" x2="500" y2="450" stroke="#e91e63" stroke-width="2" marker-end="url(#arrow1)"/>
+  <rect x="250" y="450" width="500" height="60" rx="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+  <text x="500" y="480" text-anchor="middle" font-size="14" font-weight="bold" fill="#4caf50">LACERA_AGENT Ready</text>
+  <text x="500" y="498" text-anchor="middle" font-size="10" fill="#1a1a2e">Natural Language Queries for Investment Analytics</text>
+
+  <!-- Legend -->
+  <rect x="50" y="530" width="900" height="55" rx="6" fill="#f5f5f5" stroke="#cccccc" stroke-width="0.5"/>
+  <text x="70" y="550" font-size="10" font-weight="bold" fill="#1a1a2e">Legend:</text>
+  <rect x="130" y="540" width="20" height="12" fill="#e3f2fd" stroke="#1976d2" stroke-width="0.5"/>
+  <text x="158" y="550" font-size="9" fill="#1a1a2e">Infrastructure</text>
+  <rect x="250" y="540" width="20" height="12" fill="#e8f5e9" stroke="#4caf50" stroke-width="0.5"/>
+  <text x="278" y="550" font-size="9" fill="#1a1a2e">Analytics Layer</text>
+  <rect x="380" y="540" width="20" height="12" fill="#fff3e0" stroke="#ff9800" stroke-width="0.5"/>
+  <text x="408" y="550" font-size="9" fill="#1a1a2e">Search Services</text>
+  <rect x="510" y="540" width="20" height="12" fill="#f3e5f5" stroke="#9c27b0" stroke-width="0.5"/>
+  <text x="538" y="550" font-size="9" fill="#1a1a2e">ML / AI</text>
+  <rect x="610" y="540" width="20" height="12" fill="#fce4ec" stroke="#e91e63" stroke-width="0.5"/>
+  <text x="638" y="550" font-size="9" fill="#1a1a2e">Agent</text>
+  <text x="70" y="575" font-size="9" fill="#666666">Execution Order: Steps 1-9 must be executed sequentially. Step 7 (notebook) is optional - SQL UDFs in Step 8 work independently.</text>
+
+  <defs><marker id="arrow1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#1a1a2e"/></marker></defs>
+</svg>

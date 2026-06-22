@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1000" height="550" fill="#ffffff"/>
+  <text x="500" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">LACERA - ML Model Pipeline</text>
+
+  <!-- Model 1: Return Forecasting -->
+  <rect x="30" y="70" width="300" height="440" rx="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
+  <text x="180" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#1976d2">Model 1: Return Forecasting</text>
+  <rect x="50" y="120" width="260" height="60" rx="6" fill="#ffffff" stroke="#90caf9" stroke-width="1"/>
+  <text x="180" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Input Data</text>
+  <text x="180" y="157" text-anchor="middle" font-size="9" fill="#666666">PERFORMANCE_RETURNS table</text>
+  <text x="180" y="172" text-anchor="middle" font-size="9" fill="#666666">36 months historical returns</text>
+  <line x1="180" y1="180" x2="180" y2="200" stroke="#1976d2" stroke-width="1" marker-end="url(#arrowM)"/>
+  <rect x="50" y="200" width="260" height="60" rx="6" fill="#ffffff" stroke="#90caf9" stroke-width="1"/>
+  <text x="180" y="220" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Feature Engineering</text>
+  <text x="180" y="237" text-anchor="middle" font-size="9" fill="#666666">Moving averages (3/6/12 month)</text>
+  <text x="180" y="252" text-anchor="middle" font-size="9" fill="#666666">Volatility, momentum, trend</text>
+  <line x1="180" y1="260" x2="180" y2="280" stroke="#1976d2" stroke-width="1" marker-end="url(#arrowM)"/>
+  <rect x="50" y="280" width="260" height="60" rx="6" fill="#bbdefb" stroke="#1976d2" stroke-width="1"/>
+  <text x="180" y="300" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Algorithm</text>
+  <text x="180" y="317" text-anchor="middle" font-size="9" fill="#666666">Exponential smoothing with</text>
+  <text x="180" y="332" text-anchor="middle" font-size="9" fill="#666666">momentum-adjusted forecasting</text>
+  <line x1="180" y1="340" x2="180" y2="360" stroke="#1976d2" stroke-width="1" marker-end="url(#arrowM)"/>
+  <rect x="50" y="360" width="260" height="60" rx="6" fill="#ffffff" stroke="#90caf9" stroke-width="1"/>
+  <text x="180" y="380" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Output</text>
+  <text x="180" y="397" text-anchor="middle" font-size="9" fill="#666666">FORECAST_RETURNS(asset_class, horizon)</text>
+  <text x="180" y="412" text-anchor="middle" font-size="9" fill="#666666">Returns ARRAY of forecasted values</text>
+  <rect x="50" y="435" width="260" height="55" rx="6" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
+  <text x="180" y="455" text-anchor="middle" font-size="9" font-weight="bold" fill="#4caf50">Use Cases</text>
+  <text x="180" y="472" text-anchor="middle" font-size="8" fill="#666666">Asset allocation planning</text>
+  <text x="180" y="484" text-anchor="middle" font-size="8" fill="#666666">Board reporting projections</text>
+
+  <!-- Model 2: Risk Anomaly Detection -->
+  <rect x="350" y="70" width="300" height="440" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="1.5"/>
+  <text x="500" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#ff9800">Model 2: Risk Anomaly Detection</text>
+  <rect x="370" y="120" width="260" height="60" rx="6" fill="#ffffff" stroke="#ffcc80" stroke-width="1"/>
+  <text x="500" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Input Data</text>
+  <text x="500" y="157" text-anchor="middle" font-size="9" fill="#666666">RISK_METRICS table</text>
+  <text x="500" y="172" text-anchor="middle" font-size="9" fill="#666666">VaR, tracking error, beta, vol</text>
+  <line x1="500" y1="180" x2="500" y2="200" stroke="#ff9800" stroke-width="1" marker-end="url(#arrowM)"/>
+  <rect x="370" y="200" width="260" height="60" rx="6" fill="#ffffff" stroke="#ffcc80" stroke-width="1"/>
+  <text x="500" y="220" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Feature Engineering</text>
+  <text x="500" y="237" text-anchor="middle" font-size="9" fill="#666666">Z-score normalization</text>
+  <text x="500" y="252" text-anchor="middle" font-size="9" fill="#666666">Rolling std dev (30/90 day)</text>
+  <line x1="500" y1="260" x2="500" y2="280" stroke="#ff9800" stroke-width="1" marker-end="url(#arrowM)"/>
+  <rect x="370" y="280" width="260" height="60" rx="6" fill="#ffe0b2" stroke="#ff9800" stroke-width="1"/>
+  <text x="500" y="300" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Algorithm</text>
+  <text x="500" y="317" text-anchor="middle" font-size="9" fill="#666666">Statistical outlier detection</text>
+  <text x="500" y="332" text-anchor="middle" font-size="9" fill="#666666">Z-score threshold (2.5 sigma)</text>
+  <line x1="500" y1="340" x2="500" y2="360" stroke="#ff9800" stroke-width="1" marker-end="url(#arrowM)"/>
+  <rect x="370" y="360" width="260" height="60" rx="6" fill="#ffffff" stroke="#ffcc80" stroke-width="1"/>
+  <text x="500" y="380" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Output</text>
+  <text x="500" y="397" text-anchor="middle" font-size="9" fill="#666666">DETECT_RISK_ANOMALIES(lookback_days)</text>
+  <text x="500" y="412" text-anchor="middle" font-size="9" fill="#666666">Returns ARRAY of anomaly records</text>
+  <rect x="370" y="435" width="260" height="55" rx="6" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
+  <text x="500" y="455" text-anchor="middle" font-size="9" font-weight="bold" fill="#4caf50">Use Cases</text>
+  <text x="500" y="472" text-anchor="middle" font-size="8" fill="#666666">Early warning for risk breaches</text>
+  <text x="500" y="484" text-anchor="middle" font-size="8" fill="#666666">Daily CIO risk alerts</text>
+
+  <!-- Model 3: Manager Performance Scoring -->
+  <rect x="670" y="70" width="300" height="440" rx="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="820" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#9c27b0">Model 3: Manager Scoring</text>
+  <rect x="690" y="120" width="260" height="60" rx="6" fill="#ffffff" stroke="#ce93d8" stroke-width="1"/>
+  <text x="820" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Input Data</text>
+  <text x="820" y="157" text-anchor="middle" font-size="9" fill="#666666">PERFORMANCE_RETURNS + RISK_METRICS</text>
+  <text x="820" y="172" text-anchor="middle" font-size="9" fill="#666666">+ INVESTMENT_MANAGERS</text>
+  <line x1="820" y1="180" x2="820" y2="200" stroke="#9c27b0" stroke-width="1" marker-end="url(#arrowM)"/>
+  <rect x="690" y="200" width="260" height="60" rx="6" fill="#ffffff" stroke="#ce93d8" stroke-width="1"/>
+  <text x="820" y="220" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Feature Engineering</text>
+  <text x="820" y="237" text-anchor="middle" font-size="9" fill="#666666">Sharpe ratio, information ratio</text>
+  <text x="820" y="252" text-anchor="middle" font-size="9" fill="#666666">Alpha, consistency, drawdown</text>
+  <line x1="820" y1="260" x2="820" y2="280" stroke="#9c27b0" stroke-width="1" marker-end="url(#arrowM)"/>
+  <rect x="690" y="280" width="260" height="60" rx="6" fill="#e1bee7" stroke="#9c27b0" stroke-width="1"/>
+  <text x="820" y="300" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Algorithm</text>
+  <text x="820" y="317" text-anchor="middle" font-size="9" fill="#666666">Weighted composite scoring</text>
+  <text x="820" y="332" text-anchor="middle" font-size="9" fill="#666666">Percentile ranking across peers</text>
+  <line x1="820" y1="340" x2="820" y2="360" stroke="#9c27b0" stroke-width="1" marker-end="url(#arrowM)"/>
+  <rect x="690" y="360" width="260" height="60" rx="6" fill="#ffffff" stroke="#ce93d8" stroke-width="1"/>
+  <text x="820" y="380" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a2e">Output</text>
+  <text x="820" y="397" text-anchor="middle" font-size="9" fill="#666666">SCORE_MANAGER_PERFORMANCE()</text>
+  <text x="820" y="412" text-anchor="middle" font-size="9" fill="#666666">Returns ARRAY of scored managers</text>
+  <rect x="690" y="435" width="260" height="55" rx="6" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
+  <text x="820" y="455" text-anchor="middle" font-size="9" font-weight="bold" fill="#4caf50">Use Cases</text>
+  <text x="820" y="472" text-anchor="middle" font-size="8" fill="#666666">Manager selection/termination</text>
+  <text x="820" y="484" text-anchor="middle" font-size="8" fill="#666666">Quarterly performance review</text>
+
+  <defs><marker id="arrowM" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#1a1a2e"/></marker></defs>
+</svg>
