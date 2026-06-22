@@ -59,8 +59,8 @@
   <text x="150" y="235" text-anchor="middle" font-size="10" fill="#1a1a2e">ML Functions (x3)</text>
   <text x="150" y="253" text-anchor="middle" font-size="8" fill="#666666">08_ml_model_functions.sql</text>
 
-  <!-- Arrow down to agent -->
-  <line x1="500" y1="280" x2="500" y2="320" stroke="#e91e63" stroke-width="2" marker-end="url(#arrow1)"/>
+  <!-- Arrow down from Step 8 to Step 9 agent: down, curve right, then down into Step 9 -->
+  <path d="M 150 270 L 150 285 Q 150 295 160 295 L 490 295 Q 500 295 500 305 L 500 320" fill="none" stroke="#e91e63" stroke-width="2" marker-end="url(#arrow1)"/>
 
   <!-- Step 9 - Agent -->
   <rect x="300" y="320" width="400" height="90" rx="10" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
